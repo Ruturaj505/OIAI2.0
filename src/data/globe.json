@@ -1,0 +1,128 @@
+[
+  {
+    "order": 1,
+    "startLat": 20.2961,
+    "startLng": 85.8245,
+    "endLat": 37.7749,
+    "endLng": -122.4194,
+    "arcAlt": 0.4,
+    "color": "#00f2fe"
+  },
+  {
+    "order": 2,
+    "startLat": 20.2961,
+    "startLng": 85.8245,
+    "endLat": 51.5074,
+    "endLng": -0.1278,
+    "arcAlt": 0.35,
+    "color": "#4facfe"
+  },
+  {
+    "order": 3,
+    "startLat": 20.2961,
+    "startLng": 85.8245,
+    "endLat": 1.3521,
+    "endLng": 103.8198,
+    "arcAlt": 0.2,
+    "color": "#38bdf8"
+  },
+  {
+    "order": 4,
+    "startLat": 20.2961,
+    "startLng": 85.8245,
+    "endLat": 35.6762,
+    "endLng": 139.6503,
+    "arcAlt": 0.3,
+    "color": "#00f2fe"
+  },
+  {
+    "order": 5,
+    "startLat": 20.2961,
+    "startLng": 85.8245,
+    "endLat": 12.9716,
+    "endLng": 77.5946,
+    "arcAlt": 0.15,
+    "color": "#4facfe"
+  },
+  {
+    "order": 6,
+    "startLat": 12.9716,
+    "startLng": 77.5946,
+    "endLat": 40.7128,
+    "endLng": -74.006,
+    "arcAlt": 0.45,
+    "color": "#38bdf8"
+  },
+  {
+    "order": 7,
+    "startLat": 37.7749,
+    "startLng": -122.4194,
+    "endLat": 35.6762,
+    "endLng": 139.6503,
+    "arcAlt": 0.35,
+    "color": "#00f2fe"
+  },
+  {
+    "order": 8,
+    "startLat": 51.5074,
+    "startLng": -0.1278,
+    "endLat": 47.3769,
+    "endLng": 8.5417,
+    "arcAlt": 0.15,
+    "color": "#818cf8"
+  },
+  {
+    "order": 9,
+    "startLat": 47.3769,
+    "startLng": 8.5417,
+    "endLat": 20.2961,
+    "endLng": 85.8245,
+    "arcAlt": 0.35,
+    "color": "#00f2fe"
+  },
+  {
+    "order": 10,
+    "startLat": 47.6062,
+    "startLng": -122.3321,
+    "endLat": 20.2961,
+    "endLng": 85.8245,
+    "arcAlt": 0.45,
+    "color": "#4facfe"
+  },
+  {
+    "order": 11,
+    "startLat": 20.2961,
+    "startLng": 85.8245,
+    "endLat": 25.2048,
+    "endLng": 55.2708,
+    "arcAlt": 0.22,
+    "color": "#38bdf8"
+  },
+  {
+    "order": 12,
+    "startLat": 20.2961,
+    "startLng": 85.8245,
+    "endLat": -33.8688,
+    "endLng": 151.2093,
+    "arcAlt": 0.4,
+    "color": "#00f2fe"
+  },
+  {
+    "order": 13,
+    "startLat": 43.6532,
+    "startLng": -79.3832,
+    "endLat": 20.2961,
+    "endLng": 85.8245,
+    "arcAlt": 0.42,
+    "color": "#818cf8"
+  },
+  {
+    "order": 14,
+    "startLat": 1.3521,
+    "startLng": 103.8198,
+    "endLat": -33.8688,
+    "endLng": 151.2093,
+    "arcAlt": 0.28,
+    "color": "#4facfe"
+  }
+]

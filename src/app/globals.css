@@ -1,0 +1,408 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+
+  /* Alternating Soft Light & Deep Indigo Palette */
+  --color-alt-hero: #f8fafc;
+  --color-alt-metrics: #e2e8f0;
+  --color-alt-pillars: #f1f5f9;
+  --color-alt-curriculum: #312e81;
+  --color-alt-labs: #1e1b4b;
+  --color-alt-why: #17153b;
+  --color-alt-faq: #0b1026;
+
+  /* Surface & Card Design Tokens */
+  --color-alt-card-light: #e8edf5;
+  --color-alt-card-light-tint: #e9eafe;
+  --color-alt-border-light: #cbd5e1;
+  --color-alt-card-dark: #25234f;
+  --color-alt-card-dark-alt: #272451;
+  --color-alt-border-dark: #45416f;
+
+  /* Brand & Accent Tokens */
+  --color-alt-accent-indigo: #4338ca;
+  --color-alt-accent-bright: #4f46e5;
+  --color-alt-accent-soft: #a5b4fc;
+  --color-alt-accent-purple: #c4b5fd;
+
+  --color-oiai-blue: #2563eb;
+  --color-oiai-violet: #7c3aed;
+  --color-oiai-teal: #14b8a6;
+  --color-oiai-navy: #0f172a;
+  --color-oiai-ink: #020617;
+  --color-oiai-surface: #f8fafc;
+  --color-oiai-card: #e8edf5;
+  --color-oiai-border: #cbd5e1;
+  --color-oiai-border-dark: #45416f;
+  --color-oiai-text: #0f172a;
+  --color-oiai-text-secondary: #334155;
+  --color-oiai-muted: #475569;
+  --color-oiai-blue-soft: #a5b4fc;
+  --color-oiai-violet-soft: #c4b5fd;
+}
+
+@theme inline {
+  --color-alt-hero: #f8fafc;
+  --color-alt-metrics: #e2e8f0;
+  --color-alt-pillars: #f1f5f9;
+  --color-alt-curriculum: #312e81;
+  --color-alt-labs: #1e1b4b;
+  --color-alt-why: #17153b;
+  --color-alt-faq: #0b1026;
+
+  --color-alt-card-light: #e8edf5;
+  --color-alt-card-light-tint: #e9eafe;
+  --color-alt-border-light: #cbd5e1;
+  --color-alt-card-dark: #25234f;
+  --color-alt-card-dark-alt: #272451;
+  --color-alt-border-dark: #45416f;
+
+  --color-alt-accent-indigo: #4338ca;
+  --color-alt-accent-bright: #4f46e5;
+  --color-alt-accent-soft: #a5b4fc;
+  --color-alt-accent-purple: #c4b5fd;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-oiai-blue: #2563eb;
+  --color-oiai-violet: #7c3aed;
+  --color-oiai-teal: #14b8a6;
+  --color-oiai-navy: #0f172a;
+  --color-oiai-ink: #020617;
+  --color-oiai-surface: #f8fafc;
+  --color-oiai-card: #e8edf5;
+  --color-oiai-border: #cbd5e1;
+  --color-oiai-border-dark: #45416f;
+  --color-oiai-text: #0f172a;
+  --color-oiai-text-secondary: #334155;
+  --color-oiai-muted: #475569;
+  --color-oiai-blue-soft: #a5b4fc;
+  --color-oiai-violet-soft: #c4b5fd;
+
+  --shadow-oiai-blue: 0 0 32px rgba(37, 99, 235, 0.18);
+  --shadow-oiai-violet: 0 0 32px rgba(124, 58, 237, 0.16);
+  --shadow-indigo-glow: 0 0 24px rgba(79, 70, 229, 0.22);
+  --shadow-purple-glow: 0 0 24px rgba(196, 181, 253, 0.18);
+
+  --background-image-oiai-gradient: linear-gradient(120deg, #4338ca 0%, #6366f1 100%);
+  --background-image-oiai-hero: radial-gradient(ellipse at 75% 20%, rgba(79,70,229,0.07), transparent 45%), radial-gradient(ellipse at 20% 70%, rgba(67,56,202,0.05), transparent 45%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f8fafc;
+  color: #0f172a;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Visible keyboard focus indicators (WCAG 2.2 AAA) */
+:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 3px;
+}
+
+/* Custom Webkit Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080b11;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+  border: 1px solid rgba(124, 58, 237, 0.25);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+  border-color: rgba(37, 99, 235, 0.5);
+}
+
+/* Glassmorphism Utilities */
+.glass-panel {
+  background: rgba(14, 19, 31, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(248, 250, 252, 0.1);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-hover:hover {
+  border-color: rgba(99, 102, 241, 0.4);
+  box-shadow: 0 0 30px rgba(99, 102, 241, 0.15), inset 0 0 20px rgba(99, 102, 241, 0.08);
+}
+
+/* Primary Buttons: Indigo */
+.glow-button {
+  position: relative;
+  background-color: #4338ca;
+  color: #f8fafc;
+  font-weight: 600;
+  box-shadow: 0 4px 14px rgba(67, 56, 202, 0.28);
+  transition: all 0.25s ease;
+}
+
+.glow-button:hover {
+  background-color: #3730a3;
+  box-shadow: 0 6px 22px rgba(67, 56, 202, 0.4);
+  transform: translateY(-1px);
+}
+
+.glow-button-ghost {
+  position: relative;
+  background: rgba(248, 250, 252, 0.04);
+  border: 1px solid rgba(99, 102, 241, 0.25);
+  backdrop-filter: blur(8px);
+  color: #f8fafc;
+  transition: all 0.3s ease;
+}
+
+.glow-button-ghost:hover {
+  border-color: rgba(37, 99, 235, 0.6);
+  background: rgba(37, 99, 235, 0.08);
+  box-shadow: 0 0 25px rgba(37, 99, 235, 0.25);
+  transform: translateY(-2px);
+}
+
+/* Accent Teal Utilities (#14B8A6) */
+.badge-accent-teal {
+  background: rgba(20, 184, 166, 0.12);
+  border: 1px solid rgba(20, 184, 166, 0.35);
+  color: #14b8a6;
+}
+
+/* Radial Ambient Glows */
+.ambient-glow-top {
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 900px;
+  height: 550px;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.18) 0%, rgba(124, 58, 237, 0.12) 40%, transparent 70%);
+  pointer-events: none;
+  filter: blur(80px);
+  z-index: -1;
+}
+
+.ambient-glow-side {
+  position: absolute;
+  top: 30%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.14) 0%, rgba(20, 184, 166, 0.06) 50%, transparent 75%);
+  pointer-events: none;
+  filter: blur(100px);
+  z-index: -1;
+}
+
+/* Shimmer Border Animation */
+@keyframes border-shimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.shimmer-badge {
+  background: linear-gradient(90deg, rgba(37, 99, 235, 0.2), rgba(124, 58, 237, 0.35), rgba(20, 184, 166, 0.2));
+  background-size: 200% 200%;
+  animation: border-shimmer 4s ease infinite;
+}
+
+/* Modern Neural Network / Node Graph Background Theme */
+.cyber-grid {
+  background-size: 48px 48px, 48px 48px, 48px 48px;
+  background-image: 
+    radial-gradient(circle at 1px 1px, rgba(124, 58, 237, 0.2) 1.2px, transparent 0),
+    linear-gradient(to right, rgba(37, 99, 235, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(37, 99, 235, 0.04) 1px, transparent 1px);
+}
+
+.neural-matrix-overlay {
+  background-image: 
+    radial-gradient(circle at 50% 50%, rgba(37, 99, 235, 0.06) 0%, transparent 70%),
+    radial-gradient(circle at 2px 2px, rgba(124, 58, 237, 0.12) 1.5px, transparent 0);
+  background-size: 100% 100%, 40px 40px;
+}
+
+/* Antigravity Floating Animation */
+@keyframes antigravity {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(0.5deg);
+  }
+}
+
+.floating-element {
+  animation: antigravity 6s ease-in-out infinite;
+}
+
+/* Liquid Glass Effect — OIAI Cinematic Hero & Navigation */
+.liquid-glass {
+  background: rgba(11, 16, 38, 0.65);
+  background-blend-mode: luminosity;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: none;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.15), 0 8px 30px -6px rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.liquid-glass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.4px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.45) 0%,
+    rgba(165, 180, 252, 0.3) 25%,
+    rgba(255, 255, 255, 0.05) 50%,
+    rgba(99, 102, 241, 0.35) 75%,
+    rgba(255, 255, 255, 0.45) 100%
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Hero Scrolling Mosaic Keyframes */
+@keyframes mosaic-scroll-up {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes mosaic-scroll-down {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-mosaic-up {
+  animation: mosaic-scroll-up var(--mosaic-speed, 35s) linear infinite;
+  will-change: transform;
+}
+
+.animate-mosaic-down {
+  animation: mosaic-scroll-down var(--mosaic-speed, 35s) linear infinite;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-mosaic-up,
+  .animate-mosaic-down {
+    animation-play-state: paused !important;
+  }
+}
+
+/* =========================================================================
+   ATRIUM BRUTALIST EDITORIAL DESIGN TOKENS & MARQUEE ANIMATIONS
+   ========================================================================= */
+:root {
+  --display: var(--font-display, "Archivo", system-ui, sans-serif);
+  --paper: #f5f4ef;
+  --ink: #0f0f0e;
+  --card-dark: #151515;
+  --card-cream: #f9f6f1;
+  --red: #ef5d44;
+  --yellow: #fcdd71;
+  --blue: #9fd5f7;
+  --grain: url(https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/40b7fef3-410d-4ef3-bd67-0a2fc7ee5a1d.svg);
+
+  --col-w: 205.33px;
+  --gap-w: 13px;
+  --pitch-h: 282.5px;
+  --radius-card: 22px;
+}
+
+@keyframes atriumColDown {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(0, -50%, 0); }
+}
+
+@keyframes atriumColUp {
+  0% { transform: translate3d(0, -50%, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+
+.atrium-col-down {
+  animation: atriumColDown 14.6s linear infinite;
+  will-change: transform;
+}
+
+.atrium-col-up {
+  animation: atriumColUp 14.6s linear infinite;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .atrium-col-down,
+  .atrium-col-up {
+    animation: none !important;
+  }
+}
+
+/* Hide Next.js DevTools indicator button in bottom corner */
+nextjs-portal,
+#__next-build-watcher,
+[data-nextjs-dev-tools-indicator],
+[data-nextjs-toast] {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+

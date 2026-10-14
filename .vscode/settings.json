@@ -1,0 +1,6 @@
+{
+  "debug.javascript.nodeExecutable": "C:\\Users\\rutur\\AppData\\Local\\nvm\\v24.3.0\\node.exe",
+  "terminal.integrated.env.windows": {
+    "PATH": "C:\\Users\\rutur\\AppData\\Local\\nvm\\v24.3.0;${env:PATH}"
+  }
+}
