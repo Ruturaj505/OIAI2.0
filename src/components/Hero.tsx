@@ -59,7 +59,7 @@ export default function Hero({
         {/* Left Editorial Text & Actions Column */}
         <div className="w-full lg:w-[48%] xl:w-[46%] flex flex-col z-10 shrink-0 pb-8 sm:pb-16 lg:pb-20 mt-1 sm:mt-2 lg:mt-4">
           
-          {/* Headline - Space Grotesk Bold Fluid 24–54px */}
+          {/* Headline - Space Grotesk Bold Fluid 22–44px */}
           <h1 className="hero-headline uppercase text-[#0f172a] m-0">
             <span className="block">Learn Artificial Intelligence.</span>
             <span className="block text-[#0f172a]">Build Real Skills.</span>
