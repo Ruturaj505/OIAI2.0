@@ -73,7 +73,7 @@ export default function CurriculumCatalog({ onOpenInquiry }: CurriculumCatalogPr
     <section 
       id="curriculum"
       aria-label="Curriculum Tracks"
-      className="w-full py-24 lg:py-32 bg-indigo-900 text-slate-50 border-b border-[#45416F]"
+      className="w-full py-24 lg:py-32 bg-[#312E81] text-slate-50 border-b border-[#45416F]"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -84,11 +84,11 @@ export default function CurriculumCatalog({ onOpenInquiry }: CurriculumCatalogPr
             <span>CURRICULUM CATALOG • 12 TRACKS</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#F1F5F9] tracking-tight">
+          <h2 className="section-heading text-[#F1F5F9]">
             Comprehensive AI Curriculum Catalog
           </h2>
 
-          <p className="mt-4 text-base sm:text-lg text-[#CBD5E1] leading-relaxed">
+          <p className="mt-4 body-paragraph text-[#CBD5E1]">
             Exactly twelve focused tracks spanning foundations, model training, computer vision, natural language processing, and autonomous agents.
           </p>
         </div>
@@ -102,15 +102,15 @@ export default function CurriculumCatalog({ onOpenInquiry }: CurriculumCatalogPr
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
               
               {/* Audience Pills */}
-              <div className="flex flex-wrap items-center gap-2">
-                <span className="text-xs font-mono text-[#CBD5E1] font-bold uppercase tracking-wider mr-1">Audience:</span>
+              <div className="flex items-center gap-2 overflow-x-auto pb-1 sm:pb-0 sm:flex-wrap no-scrollbar">
+                <span className="text-xs font-mono text-[#CBD5E1] font-bold uppercase tracking-wider mr-1 shrink-0">Audience:</span>
                 {(["All", "Students", "Corporate"] as FilterAudience[]).map((aud) => {
                   const isSelected = selectedAudience === aud;
                   return (
                     <button
                       key={aud}
                       onClick={() => setSelectedAudience(aud)}
-                      className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
+                      className={`shrink-0 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
                         isSelected
                           ? "bg-[#A5B4FC] text-[#1E1B4B] shadow-xs font-bold"
                           : "bg-[#1E1B4B]/80 hover:bg-[#1E1B4B] text-[#CBD5E1] border border-[#45416F]"
@@ -123,15 +123,15 @@ export default function CurriculumCatalog({ onOpenInquiry }: CurriculumCatalogPr
               </div>
 
               {/* Skill Level Pills */}
-              <div className="flex flex-wrap items-center gap-2">
-                <span className="text-xs font-mono text-[#CBD5E1] font-bold uppercase tracking-wider mr-1">Level:</span>
+              <div className="flex items-center gap-2 overflow-x-auto pb-1 sm:pb-0 sm:flex-wrap no-scrollbar">
+                <span className="text-xs font-mono text-[#CBD5E1] font-bold uppercase tracking-wider mr-1 shrink-0">Level:</span>
                 {(["All", "Beginner", "Intermediate", "Advanced"] as FilterLevel[]).map((lvl) => {
                   const isSelected = selectedLevel === lvl;
                   return (
                     <button
                       key={lvl}
                       onClick={() => setSelectedLevel(lvl)}
-                      className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
+                      className={`shrink-0 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
                         isSelected
                           ? "bg-[#A5B4FC] text-[#1E1B4B] shadow-xs font-bold"
                           : "bg-[#1E1B4B]/80 hover:bg-[#1E1B4B] text-[#CBD5E1] border border-[#45416F]"
@@ -211,11 +211,11 @@ export default function CurriculumCatalog({ onOpenInquiry }: CurriculumCatalogPr
                   </div>
 
                   {/* Title & Description */}
-                  <h3 className="text-xl font-bold text-[#F1F5F9] group-hover:text-[#A5B4FC] transition-colors leading-snug">
+                  <h3 className="card-heading text-[#F1F5F9] group-hover:text-[#A5B4FC] transition-colors leading-snug">
                     {prog.title}
                   </h3>
 
-                  <p className="mt-2 text-sm text-[#CBD5E1] leading-relaxed">
+                  <p className="mt-2 text-sm sm:text-[15px] font-sans text-[#CBD5E1] leading-relaxed">
                     {prog.description}
                   </p>
 
@@ -256,7 +256,7 @@ export default function CurriculumCatalog({ onOpenInquiry }: CurriculumCatalogPr
                 <div className="mt-6 pt-4 border-t border-[#45416F]">
                   <button
                     onClick={() => setActiveModalProgram(prog)}
-                    className="w-full py-2.5 rounded-xl bg-[#1E1B4B] hover:bg-[#272451] hover:border-[#A5B4FC] border border-[#45416F] text-slate-200 hover:text-[#A5B4FC] text-sm font-semibold flex items-center justify-center gap-2 transition-colors cursor-pointer"
+                    className="w-full py-2.5 rounded-xl bg-[#1E1B4B] hover:bg-[#272451] hover:border-[#A5B4FC] border border-[#45416F] text-slate-200 hover:text-[#A5B4FC] button-typography text-sm flex items-center justify-center gap-2 transition-colors cursor-pointer"
                   >
                     <span>View Program</span>
                     <ArrowRight className="w-4 h-4 text-[#A5B4FC]" aria-hidden="true" />

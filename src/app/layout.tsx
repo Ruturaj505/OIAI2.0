@@ -1,17 +1,20 @@
 import type { Metadata, Viewport } from "next";
-import { Archivo, Inter, JetBrains_Mono } from "next/font/google";
+import { Space_Grotesk, Inter, JetBrains_Mono } from "next/font/google";
+import WhatsAppAdvisor from "@/components/WhatsAppAdvisor";
+import AIChatbot from "@/components/AIChatbot";
 import "./globals.css";
 
-const archivo = Archivo({
-  variable: "--font-display",
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space-grotesk",
   subsets: ["latin"],
-  weight: ["400", "600", "700", "800", "900"],
+  weight: ["600", "700"],
   display: "swap",
 });
 
 const inter = Inter({
-  variable: "--font-sans",
+  variable: "--font-inter",
   subsets: ["latin"],
+  weight: ["400", "500", "600"],
   display: "swap",
 });
 
@@ -149,15 +152,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${archivo.variable} ${inter.variable} ${jetbrainsMono.variable}`}>
+    <html lang="en" className={`${spaceGrotesk.variable} ${inter.variable} ${jetbrainsMono.variable}`}>
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdSchema) }}
         />
       </head>
-      <body className="min-h-screen bg-[#f5f4ef] text-[#0f0f0e] font-sans antialiased selection:bg-indigo-500/20 selection:text-indigo-900 flex flex-col">
+      <body className="min-h-screen bg-[#F8FAFC] text-[#0f172a] font-sans antialiased selection:bg-indigo-500/20 selection:text-indigo-900 flex flex-col">
         {children}
+        <AIChatbot />
+        <WhatsAppAdvisor />
       </body>
     </html>
   );

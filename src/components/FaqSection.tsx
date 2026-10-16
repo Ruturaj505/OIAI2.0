@@ -39,11 +39,11 @@ export default function FaqSection() {
             <span>FREQUENTLY ASKED QUESTIONS • ADMISSIONS &amp; LOGISTICS</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#E2E8F0] tracking-tight">
+          <h2 className="section-heading text-[#E2E8F0]">
             Frequently Asked Questions
           </h2>
 
-          <p className="mt-4 text-base sm:text-lg text-[#CBD5E1] leading-relaxed">
+          <p className="mt-4 body-paragraph text-[#CBD5E1]">
             Essential answers regarding prerequisites, admissions criteria, learning formats, tools, and technical assessments.
           </p>
         </div>
@@ -79,7 +79,7 @@ export default function FaqSection() {
                     }`}>
                       0{index + 1}
                     </span>
-                    <h3 className="text-base sm:text-lg font-bold text-[#E2E8F0] leading-snug">
+                    <h3 className="card-heading text-base sm:text-lg lg:text-xl font-semibold text-[#E2E8F0] leading-snug">
                       {item.question}
                     </h3>
                   </div>
@@ -96,7 +96,7 @@ export default function FaqSection() {
                     id={contentId}
                     role="region"
                     aria-labelledby={buttonId}
-                    className="px-5 pb-6 sm:px-6 pt-1 text-sm sm:text-base text-[#CBD5E1] leading-relaxed border-t border-[#45416F] bg-[#17153B]/40"
+                    className="px-5 pb-6 sm:px-6 pt-1 body-paragraph text-sm sm:text-base text-[#CBD5E1] border-t border-[#45416F] bg-[#17153B]/40"
                   >
                     <p>{item.answer}</p>
                     <div className="mt-4 pt-3 border-t border-[#45416F] flex items-center gap-2 text-xs font-mono text-[#C4B5FD]">

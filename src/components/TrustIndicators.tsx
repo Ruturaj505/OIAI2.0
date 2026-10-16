@@ -72,7 +72,7 @@ export default function TrustIndicators() {
   return (
     <section 
       aria-label="Hero Trust Indicators"
-      className="w-full bg-[#faf9f5] border-b border-black/[0.08] py-3.5 sm:py-4 px-4 sm:px-6 lg:px-10 relative z-20 shadow-xs"
+      className="w-full bg-[#F8FAFC] border-b border-[#CBD5E1] py-3.5 sm:py-4 px-4 sm:px-6 lg:px-10 relative z-20 shadow-xs"
     >
       <div className="max-w-[1400px] mx-auto">
         {/* Badges Container: Responsive Grid on Desktop / Smooth Scroll on Small Devices */}
@@ -80,7 +80,7 @@ export default function TrustIndicators() {
           {TRUST_BADGES.map((badge) => (
             <div
               key={badge.id}
-              className="group relative flex items-center gap-3 px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-2xl bg-white hover:bg-[#ffffff] border border-black/[0.08] hover:border-black/20 shadow-xs hover:shadow-md transition-all duration-200 shrink-0 lg:shrink cursor-default w-auto lg:w-full min-w-[210px] lg:min-w-0"
+              className="group relative flex items-center gap-3 px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-2xl bg-[#E8EDF5] hover:bg-[#E2E8F0] border border-[#CBD5E1] hover:border-indigo-400 shadow-xs hover:shadow-md transition-all duration-200 shrink-0 lg:shrink cursor-default w-auto lg:w-full min-w-[210px] lg:min-w-0"
             >
               {/* Icon Container with subtle color tint */}
               <div 
@@ -92,7 +92,7 @@ export default function TrustIndicators() {
               {/* Label, Verified Check, and Subtitle */}
               <div className="flex flex-col min-w-0 flex-1">
                 <div className="flex items-center gap-1.5">
-                  <span className="font-['Archivo',sans-serif] font-bold text-xs sm:text-[13px] text-[#0f0f0e] tracking-tight truncate whitespace-nowrap">
+                  <span className="font-heading font-semibold text-xs sm:text-[13px] text-[#0f172a] tracking-tight truncate whitespace-nowrap">
                     {badge.label}
                   </span>
                   <BadgeCheck 
@@ -100,7 +100,7 @@ export default function TrustIndicators() {
                     aria-label="Verified Trust Standard" 
                   />
                 </div>
-                <span className="text-[10px] sm:text-[11px] font-mono text-[#62615d] truncate whitespace-nowrap">
+                <span className="text-[10px] sm:text-[11px] font-sans text-slate-600 truncate whitespace-nowrap">
                   {badge.detail}
                 </span>
               </div>

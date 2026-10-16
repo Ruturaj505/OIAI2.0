@@ -120,36 +120,36 @@ export default function LearningMethodology() {
   return (
     <section 
       id="methodology" 
-      className="relative w-full py-24 lg:py-32 bg-[#f1f5f9] dark:bg-[#0d1222] border-b border-slate-200/80 dark:border-white/10 transition-colors duration-300 overflow-hidden"
+      className="relative w-full py-24 lg:py-32 bg-[#1E1B4B] text-slate-50 border-b border-[#45416F] transition-colors duration-300 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header: Clear Typographic Hierarchy */}
         <div className="text-center max-w-3xl mx-auto mb-16 relative z-10">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-violet-100/70 dark:bg-violet-950/60 border border-violet-300/60 dark:border-violet-500/30 text-[#7c3aed] dark:text-violet-300 text-xs font-mono mb-4 shadow-sm">
-            <Cpu className="w-3.5 h-3.5 text-[#7c3aed]" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#272451] border border-[#45416F] text-[#C4B5FD] text-xs font-mono mb-4 shadow-sm">
+            <Cpu className="w-3.5 h-3.5 text-[#C4B5FD]" />
             <span className="font-semibold tracking-wider uppercase">LABS &amp; METHODOLOGY • 7-STAGE PROGRESSION</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0f172a] dark:text-white tracking-tight">
+          <h2 className="section-heading text-[#F1F5F9]">
             AI Learning Methodology
           </h2>
 
           {/* Visual Progression Banner specified in Item 13 */}
-          <div className="mt-5 inline-flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 px-4 py-2 rounded-xl bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 text-xs sm:text-sm font-mono font-bold text-[#7c3aed] shadow-xs">
+          <div className="mt-5 inline-flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 px-4 py-2 rounded-xl bg-[#25234F] border border-[#45416F] text-xs sm:text-sm font-mono font-bold text-[#A5B4FC] shadow-xs">
             <span>LEARN</span>
-            <span className="text-slate-400">→</span>
+            <span className="text-[#45416F]">→</span>
             <span>PRACTICE</span>
-            <span className="text-slate-400">→</span>
+            <span className="text-[#45416F]">→</span>
             <span>BUILD</span>
-            <span className="text-slate-400">→</span>
+            <span className="text-[#45416F]">→</span>
             <span>INTERN</span>
-            <span className="text-slate-400">→</span>
+            <span className="text-[#45416F]">→</span>
             <span>CERTIFY</span>
-            <span className="text-slate-400">→</span>
-            <span className="text-teal-600 dark:text-teal-400">GET CAREER READY</span>
+            <span className="text-[#45416F]">→</span>
+            <span className="text-teal-400">GET CAREER READY</span>
           </div>
 
-          <p className="mt-4 text-base sm:text-lg text-slate-600 dark:text-slate-400 leading-relaxed max-w-2xl mx-auto">
+          <p className="mt-4 body-paragraph text-[#CBD5E1] max-w-2xl mx-auto">
             From theoretical tensor calculus foundations to commercial deployment across 7 structured, outcome-driven stages.
           </p>
         </div>
@@ -226,8 +226,8 @@ export default function LearningMethodology() {
                   onClick={() => setActiveStep(idx)}
                   className={`relative group rounded-2xl p-5 border transition-all duration-300 cursor-pointer flex flex-col justify-between ${
                     isActive
-                      ? "bg-slate-100 dark:bg-[#0c101b] border-[#7c3aed] dark:border-[#7c3aed] shadow-lg dark:shadow-[0_0_30px_rgba(124,58,237,0.22)] -translate-y-1.5"
-                      : "bg-slate-100/80 dark:bg-[#0c101b]/70 border-slate-200/80 dark:border-white/10 hover:border-[#7c3aed]/50 hover:bg-slate-100 dark:hover:bg-[#0c101b] shadow-sm"
+                      ? "bg-[#272451] border-[#C4B5FD] shadow-[0_0_24px_rgba(196,181,253,0.22)] -translate-y-1.5"
+                      : "bg-[#25234F] border-[#45416F] hover:border-[#A5B4FC]/50 hover:bg-[#272451] shadow-xs"
                   }`}
                 >
                   {/* Step Header */}
@@ -236,13 +236,13 @@ export default function LearningMethodology() {
                       <span
                         className={`text-[10px] font-mono px-2 py-0.5 rounded-full border ${
                           isActive
-                            ? "bg-violet-50 text-[#7c3aed] dark:bg-violet-950 dark:text-violet-300 border-violet-300 dark:border-violet-500/50"
-                            : "bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-white/10"
+                            ? "bg-[#1E1B4B] text-[#C4B5FD] border-[#45416F]"
+                            : "bg-[#1E1B4B] text-[#CBD5E1] border-[#45416F]"
                         }`}
                       >
                         {step.step}
                       </span>
-                      <span className="text-[10px] font-mono text-[#2563eb] dark:text-blue-400 font-bold">
+                      <span className="text-[10px] font-mono text-[#A5B4FC] font-bold">
                         {step.phase}
                       </span>
                     </div>
@@ -251,26 +251,26 @@ export default function LearningMethodology() {
                     <div
                       className={`w-10 h-10 rounded-xl p-2.5 mb-3.5 flex items-center justify-center transition-all ${
                         isActive
-                          ? "bg-violet-100 text-[#7c3aed] dark:bg-[#7c3aed]/20 dark:text-violet-300 shadow-sm"
-                          : "bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 group-hover:text-[#7c3aed] dark:group-hover:text-violet-300 group-hover:bg-violet-50 dark:group-hover:bg-violet-950/40"
+                          ? "bg-[#1E1B4B] text-[#C4B5FD] shadow-xs"
+                          : "bg-[#1E1B4B] text-[#CBD5E1] group-hover:text-[#C4B5FD]"
                       }`}
                     >
                       <Icon className="w-5 h-5" />
                     </div>
 
                     {/* Title & Subhead */}
-                    <h3 className="text-base font-extrabold text-[#0f172a] dark:text-white group-hover:text-[#2563eb] dark:group-hover:text-blue-400 transition-colors leading-tight">
+                    <h3 className="card-heading text-sm sm:text-base font-bold text-[#F1F5F9] group-hover:text-[#A5B4FC] transition-colors leading-tight">
                       {step.title}
                     </h3>
-                    <p className="text-[11px] font-mono text-slate-500 dark:text-slate-400 mt-1 leading-snug">
+                    <p className="text-[11px] font-mono text-[#CBD5E1] mt-1 leading-snug">
                       {step.subtitle}
                     </p>
                   </div>
 
                   {/* Duration & Badge */}
-                  <div className="mt-5 pt-3 border-t border-slate-200/70 dark:border-white/10 flex items-center justify-between text-[11px]">
-                    <span className="font-mono text-slate-500 dark:text-slate-400">{step.duration}</span>
-                    <span className="font-mono text-[#14b8a6] font-medium text-[10px]">{step.badge}</span>
+                  <div className="mt-5 pt-3 border-t border-[#45416F] flex items-center justify-between text-[11px]">
+                    <span className="font-mono text-[#CBD5E1]">{step.duration}</span>
+                    <span className="font-mono text-teal-400 font-medium text-[10px]">{step.badge}</span>
                   </div>
                 </motion.div>
               );
@@ -283,41 +283,41 @@ export default function LearningMethodology() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
-            className="mt-8 rounded-2xl bg-slate-100 dark:bg-[#0c101b] border border-slate-200 dark:border-white/10 p-6 sm:p-8 relative overflow-hidden shadow-xs"
+            className="mt-8 rounded-2xl bg-[#25234F] border border-[#45416F] p-6 sm:p-8 relative overflow-hidden shadow-xs"
           >
             <div className="absolute top-0 right-0 w-80 h-80 bg-gradient-to-br from-[#7c3aed]/10 via-[#2563eb]/10 to-transparent blur-3xl pointer-events-none" />
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-8 space-y-4">
                 <div className="flex items-center gap-3">
-                  <span className="px-3 py-1 rounded-full text-xs font-mono font-bold bg-violet-100 text-[#7c3aed] dark:bg-violet-950 dark:text-violet-300 border border-violet-300 dark:border-violet-500/40">
+                  <span className="px-3 py-1 rounded-full text-xs font-mono font-bold bg-[#1E1B4B] text-[#C4B5FD] border border-[#45416F]">
                     {pipelineSteps[activeStep].number} • {pipelineSteps[activeStep].phase}
                   </span>
-                  <span className="text-xs font-mono text-slate-500 dark:text-slate-400">
+                  <span className="text-xs font-mono text-[#CBD5E1]">
                     {pipelineSteps[activeStep].duration}
                   </span>
                 </div>
 
-                <h3 className="text-2xl sm:text-3xl font-extrabold text-[#0f172a] dark:text-white tracking-tight">
+                <h3 className="card-heading text-xl sm:text-2xl lg:text-3xl font-extrabold text-[#F1F5F9] tracking-tight">
                   {pipelineSteps[activeStep].title} — {pipelineSteps[activeStep].subtitle}
                 </h3>
 
-                <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed max-w-3xl">
+                <p className="body-paragraph text-sm sm:text-base text-[#CBD5E1] max-w-3xl">
                   {pipelineSteps[activeStep].description}
                 </p>
 
                 {/* Deliverables */}
                 <div className="pt-2">
-                  <p className="text-xs font-mono font-semibold uppercase text-slate-500 dark:text-slate-400 tracking-wider mb-2.5">
+                  <p className="text-xs font-mono font-semibold uppercase text-[#A5B4FC] tracking-wider mb-2.5">
                     Milestone Deliverables &amp; Artifacts:
                   </p>
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
                     {pipelineSteps[activeStep].deliverables.map((d, i) => (
                       <div
                         key={i}
-                        className="p-3 rounded-xl bg-white dark:bg-white/[0.03] border border-slate-200 dark:border-white/10 flex items-start gap-2 text-xs text-slate-700 dark:text-slate-200 shadow-xs"
+                        className="p-3 rounded-xl bg-[#1E1B4B] border border-[#45416F] flex items-start gap-2 text-xs text-[#CBD5E1] shadow-xs"
                       >
-                        <CheckCircle2 className="w-4 h-4 text-[#14b8a6] shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-4 h-4 text-teal-400 shrink-0 mt-0.5" />
                         <span>{d}</span>
                       </div>
                     ))}
@@ -326,18 +326,18 @@ export default function LearningMethodology() {
               </div>
 
               {/* Step Progress Visual Pill */}
-              <div className="lg:col-span-4 p-5 rounded-2xl bg-white dark:bg-white/[0.02] border border-slate-200 dark:border-white/10 space-y-3 shadow-xs">
+              <div className="lg:col-span-4 p-5 rounded-2xl bg-[#1E1B4B] border border-[#45416F] space-y-3 shadow-xs">
                 <div className="flex items-center justify-between text-xs font-mono">
-                  <span className="text-slate-500 dark:text-slate-400">Stage Progression</span>
-                  <span className="text-[#7c3aed] dark:text-violet-400 font-bold">{Math.round(((activeStep + 1) / 6) * 100)}%</span>
+                  <span className="text-[#CBD5E1]">Stage Progression</span>
+                  <span className="text-[#A5B4FC] font-bold">{Math.round(((activeStep + 1) / 7) * 100)}%</span>
                 </div>
-                <div className="w-full h-2 rounded-full bg-slate-200 dark:bg-white/10 overflow-hidden">
+                <div className="w-full h-2 rounded-full bg-[#25234F] overflow-hidden">
                   <div 
                     className="h-full bg-gradient-to-r from-[#2563eb] via-[#7c3aed] to-[#14b8a6] transition-all duration-500 rounded-full"
-                    style={{ width: `${((activeStep + 1) / 6) * 100}%` }}
+                    style={{ width: `${((activeStep + 1) / 7) * 100}%` }}
                   />
                 </div>
-                <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed pt-1">
+                <p className="text-xs text-[#CBD5E1] leading-relaxed pt-1 font-sans">
                   Each phase unlocks direct access to dedicated compute nodes and next-tier project reviews.
                 </p>
               </div>

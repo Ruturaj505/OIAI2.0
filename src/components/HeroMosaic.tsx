@@ -42,14 +42,13 @@ function CardTile({ tile }: { tile: TileProps }) {
   if (tile.type === "photo" && tile.src) {
     return (
       <div 
-        className="relative w-full rounded-[22px] overflow-hidden shrink-0 bg-[#f9f6f1] mb-[13px] shadow-sm"
-        style={{ height: "269px" }}
+        className="relative w-full rounded-[16px] sm:rounded-[22px] overflow-hidden shrink-0 bg-[#f9f6f1] mb-[10px] sm:mb-[13px] shadow-sm h-[185px] xs:h-[220px] sm:h-[269px]"
       >
         <Image
           src={tile.src}
           alt={tile.alt || "AI Research"}
           fill
-          sizes="(max-width: 640px) 150px, (max-width: 1024px) 190px, 205px"
+          sizes="(max-width: 640px) 130px, (max-width: 1024px) 190px, 205px"
           className="object-cover"
         />
       </div>
@@ -70,8 +69,7 @@ function CardTile({ tile }: { tile: TileProps }) {
 
   return (
     <div 
-      className={`relative w-full rounded-[22px] overflow-hidden shrink-0 mb-[13px] ${bgClass}`}
-      style={{ height: "269px" }}
+      className={`relative w-full rounded-[16px] sm:rounded-[22px] overflow-hidden shrink-0 mb-[10px] sm:mb-[13px] h-[185px] xs:h-[220px] sm:h-[269px] ${bgClass}`}
     >
       {/* Grain overlay */}
       <div 
@@ -99,12 +97,12 @@ export default function HeroMosaic() {
   return (
     <div 
       aria-hidden="true" 
-      className="relative w-full max-w-[660px] h-[600px] sm:h-[680px] lg:h-[780px] overflow-hidden flex gap-[13px] pointer-events-none select-none justify-center lg:justify-end"
+      className="relative w-full max-w-[660px] h-[380px] sm:h-[540px] lg:h-[780px] overflow-hidden flex gap-[8px] sm:gap-[13px] pointer-events-none select-none justify-center lg:justify-end"
     >
       {/* Column 1: Downward Scrolling (0 -> -50%) */}
       <div 
-        className="w-[140px] sm:w-[170px] lg:w-[205px] flex flex-col shrink-0 atrium-col-down relative"
-        style={{ top: "40px" }}
+        className="w-[102px] xs:w-[130px] sm:w-[170px] lg:w-[205px] flex flex-col shrink-0 atrium-col-down relative"
+        style={{ top: "20px" }}
       >
         {c1Tiles.map((tile, i) => (
           <CardTile key={`c1-${i}`} tile={tile} />
@@ -113,7 +111,7 @@ export default function HeroMosaic() {
 
       {/* Column 2: Upward Scrolling (-50% -> 0) */}
       <div 
-        className="w-[140px] sm:w-[170px] lg:w-[205px] flex flex-col shrink-0 atrium-col-up relative"
+        className="w-[102px] xs:w-[130px] sm:w-[170px] lg:w-[205px] flex flex-col shrink-0 atrium-col-up relative"
         style={{ top: "-11.5px" }}
       >
         {c2Tiles.map((tile, i) => (
@@ -121,10 +119,10 @@ export default function HeroMosaic() {
         ))}
       </div>
 
-      {/* Column 3: Downward Scrolling (0 -> -50%) */}
+      {/* Column 3: Downward Scrolling (0 -> -50%) - Visible on >= 370px, smoothly scales */}
       <div 
-        className="w-[140px] sm:w-[170px] lg:w-[205px] flex flex-col shrink-0 atrium-col-down relative"
-        style={{ top: "50px" }}
+        className="hidden min-[370px]:flex w-[102px] xs:w-[130px] sm:w-[170px] lg:w-[205px] flex-col shrink-0 atrium-col-down relative"
+        style={{ top: "30px" }}
       >
         {c3Tiles.map((tile, i) => (
           <CardTile key={`c3-${i}`} tile={tile} />

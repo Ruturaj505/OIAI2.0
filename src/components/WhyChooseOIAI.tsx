@@ -38,11 +38,11 @@ export default function WhyChooseOIAI() {
             <span>INSTITUTIONAL PRIORITIES • WHY OIAI</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#F1F5F9] tracking-tight">
+          <h2 className="section-heading text-[#F1F5F9]">
             Why Choose Odisha Institute of AI
           </h2>
 
-          <p className="mt-4 text-base sm:text-lg text-[#CBD5E1] leading-relaxed">
+          <p className="mt-4 body-paragraph text-[#CBD5E1]">
             Six institutional commitments guiding our curriculum development, instructional design, and learner mentoring.
           </p>
         </div>
@@ -67,11 +67,11 @@ export default function WhyChooseOIAI() {
                     </span>
                   </div>
 
-                  <h3 className="text-xl font-bold text-[#F1F5F9] leading-snug group-hover:text-[#A5B4FC] transition-colors">
+                  <h3 className="card-heading text-[#F1F5F9] leading-snug group-hover:text-[#A5B4FC] transition-colors">
                     {val.title}
                   </h3>
 
-                  <p className="mt-3 text-sm text-[#CBD5E1] leading-relaxed">
+                  <p className="mt-3 text-sm sm:text-[15px] font-sans text-[#CBD5E1] leading-relaxed">
                     {val.description}
                   </p>
                 </div>

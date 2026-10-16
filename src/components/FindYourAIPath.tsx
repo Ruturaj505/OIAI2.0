@@ -191,26 +191,26 @@ export default function FindYourAIPath({ onSelectCareer }: FindYourAIPathProps) 
     <section 
       id="find-ai-path"
       aria-label="Find Your AI Path"
-      className="w-full bg-[#f5f4ef] text-[#0f0f0e] py-20 sm:py-24 lg:py-28 border-b border-black/[0.08] relative overflow-hidden"
+      className="w-full bg-[#F8FAFC] text-[#0f172a] py-20 sm:py-24 lg:py-28 border-b border-[#CBD5E1] relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/[0.05] border border-black/[0.08] text-xs font-mono font-semibold uppercase tracking-wider text-[#0f0f0e] mb-4 shadow-2xs">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/[0.05] border border-black/[0.08] text-xs font-mono font-semibold uppercase tracking-wider text-[#0f172a] mb-4 shadow-2xs">
             <Sparkles className="w-3.5 h-3.5 text-[#ef5d44]" aria-hidden="true" />
             <span>OIAI Signature Career Navigator</span>
           </div>
 
-          <h2 className="font-['Archivo',sans-serif] text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-black tracking-[-0.03em] uppercase text-[#0f0f0e] leading-[1.05]">
+          <h2 className="section-heading uppercase text-[#0f172a] leading-[1.05]">
             Find Your AI Path
           </h2>
 
-          <p className="mt-3 text-lg sm:text-xl font-['Archivo',sans-serif] font-bold text-[#4338ca]">
+          <p className="mt-3 text-lg sm:text-xl font-heading font-bold text-[#4338ca]">
             What do you want to become?
           </p>
 
-          <p className="mt-2 text-sm sm:text-base text-[#62615d] max-w-xl mx-auto leading-relaxed">
+          <p className="mt-2 body-paragraph text-[#334155] max-w-xl mx-auto">
             Select your target career destination to preview the required skills, industry curriculum track, and launch timeline.
           </p>
         </div>
@@ -219,7 +219,7 @@ export default function FindYourAIPath({ onSelectCareer }: FindYourAIPathProps) 
         <div 
           role="radiogroup" 
           aria-label="Target AI Career Roles"
-          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5 sm:gap-4 lg:gap-5"
+          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 sm:gap-4 lg:gap-5"
         >
           {CAREER_ROLES.map((role) => {
             const isSelected = selectedRole.id === role.id;
@@ -231,16 +231,16 @@ export default function FindYourAIPath({ onSelectCareer }: FindYourAIPathProps) 
                 role="radio"
                 aria-checked={isSelected}
                 onClick={() => handleCardClick(role)}
-                className={`relative flex flex-col justify-between p-4 sm:p-5 rounded-2xl text-left transition-all duration-200 cursor-pointer ${
+                className={`relative flex flex-col justify-between p-3 sm:p-5 rounded-xl sm:rounded-2xl text-left transition-all duration-200 cursor-pointer ${
                   isSelected
                     ? "bg-[#0f0f0e] text-white shadow-xl shadow-black/20 ring-2 ring-[#0f0f0e] -translate-y-1"
-                    : "bg-white text-[#0f0f0e] border border-black/[0.08] hover:border-black/25 hover:shadow-md hover:-translate-y-0.5"
+                    : "bg-[#E8EDF5] text-[#0f172a] border border-[#CBD5E1] hover:border-indigo-400 hover:shadow-md hover:-translate-y-0.5"
                 }`}
               >
                 {/* Top Row: Icon + Badge */}
-                <div className="flex items-start justify-between w-full mb-3">
-                  <div className={`w-9 h-9 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center shrink-0 transition-colors ${
-                    isSelected ? "bg-white/10 text-white" : "bg-[#f5f4ef] text-[#0f0f0e]"
+                <div className="flex items-start justify-between w-full mb-2.5 sm:mb-3">
+                  <div className={`w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl flex items-center justify-center shrink-0 transition-colors ${
+                    isSelected ? "bg-white/10 text-white" : "bg-slate-100 text-[#0f172a]"
                   }`}>
                     {role.icon}
                   </div>
@@ -250,7 +250,7 @@ export default function FindYourAIPath({ onSelectCareer }: FindYourAIPathProps) 
                       <CheckCircle2 className="w-3.5 h-3.5" />
                     </span>
                   ) : (
-                    <span className="text-[10px] font-mono font-medium px-2 py-0.5 rounded-full bg-black/[0.04] text-[#62615d]">
+                    <span className="text-[9px] sm:text-[10px] font-mono font-medium px-1.5 sm:px-2 py-0.5 rounded-full bg-black/[0.04] text-[#62615d]">
                       {role.badge}
                     </span>
                   )}
@@ -258,13 +258,13 @@ export default function FindYourAIPath({ onSelectCareer }: FindYourAIPathProps) 
 
                 {/* Role Title & Category */}
                 <div>
-                  <h3 className={`font-['Archivo',sans-serif] text-sm sm:text-base font-bold tracking-tight leading-snug ${
-                    isSelected ? "text-white" : "text-[#0f0f0e]"
+                  <h3 className={`card-heading text-xs sm:text-base font-bold tracking-tight leading-snug ${
+                    isSelected ? "text-white" : "text-[#0f172a]"
                   }`}>
                     {role.title}
                   </h3>
-                  <p className={`text-[11px] font-mono mt-1 ${
-                    isSelected ? "text-white/70" : "text-[#62615d]"
+                  <p className={`text-[10px] sm:text-[11px] font-sans mt-0.5 sm:mt-1 ${
+                    isSelected ? "text-white/70" : "text-slate-600"
                   }`}>
                     {role.category}
                   </p>
@@ -275,7 +275,7 @@ export default function FindYourAIPath({ onSelectCareer }: FindYourAIPathProps) 
         </div>
 
         {/* Selected Career Blueprint Detail Panel */}
-        <div className="mt-8 sm:mt-10 bg-white rounded-3xl border border-black/[0.08] p-6 sm:p-8 lg:p-10 shadow-lg shadow-black/5 transition-all">
+        <div className="mt-6 sm:mt-10 bg-[#E8EDF5] rounded-2xl sm:rounded-3xl border border-[#CBD5E1] p-4.5 sm:p-8 lg:p-10 shadow-lg shadow-black/5 transition-all">
           <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
             
             {/* Left: Role Info & Skills */}
@@ -288,16 +288,16 @@ export default function FindYourAIPath({ onSelectCareer }: FindYourAIPathProps) 
                   <Clock className="w-3.5 h-3.5" />
                   {selectedRole.duration}
                 </span>
-                <span className="text-xs font-mono font-semibold text-[#0f0f0e]">
+                <span className="text-xs font-mono font-semibold text-[#0f172a]">
                   Avg CTC: {selectedRole.salaryRange}
                 </span>
               </div>
 
               <div>
-                <h3 className="font-['Archivo',sans-serif] text-2xl sm:text-3xl font-black text-[#0f0f0e] tracking-tight">
+                <h3 className="card-heading text-2xl sm:text-3xl font-black text-[#0f172a] tracking-tight">
                   {selectedRole.title} Path Blueprint
                 </h3>
-                <p className="mt-2 text-sm sm:text-base text-[#62615d] max-w-2xl leading-relaxed">
+                <p className="mt-2 body-paragraph text-[#334155] max-w-2xl">
                   {selectedRole.summary}
                 </p>
               </div>
@@ -311,7 +311,7 @@ export default function FindYourAIPath({ onSelectCareer }: FindYourAIPathProps) 
                   {selectedRole.skills.map((skill) => (
                     <span 
                       key={skill}
-                      className="px-2.5 py-1 rounded-lg text-xs font-medium bg-[#f5f4ef] text-[#0f0f0e] border border-black/[0.06]"
+                      className="px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 text-[#0f172a] border border-[#CBD5E1]"
                     >
                       {skill}
                     </span>
@@ -326,15 +326,15 @@ export default function FindYourAIPath({ onSelectCareer }: FindYourAIPathProps) 
             </div>
 
             {/* Right: Signature CTA Box */}
-            <div className="w-full lg:w-auto shrink-0 flex flex-col items-stretch sm:items-center gap-3 pt-4 lg:pt-0 border-t lg:border-t-0 border-black/10">
+            <div className="w-full lg:w-auto shrink-0 flex flex-col items-stretch sm:items-center gap-3 pt-4 lg:pt-0 border-t lg:border-t-0 border-[#CBD5E1]">
               <button
                 type="button"
                 onClick={handleCtaClick}
-                className="h-14 sm:h-16 px-8 rounded-2xl bg-[#0f0f0e] text-white font-['Archivo',sans-serif] text-base sm:text-lg font-bold flex items-center justify-center gap-3 hover:bg-[#252525] hover:-translate-y-0.5 transition-all cursor-pointer shadow-lg shadow-black/15 group w-full sm:w-auto"
+                className="h-12 sm:h-16 px-5 sm:px-8 rounded-xl sm:rounded-2xl bg-[#0f0f0e] text-white button-typography text-sm sm:text-lg flex items-center justify-center gap-2.5 sm:gap-3 hover:bg-[#252525] hover:-translate-y-0.5 transition-all cursor-pointer shadow-lg shadow-black/15 group w-full sm:w-auto"
               >
                 <span>Find My AI Career Path</span>
-                <span className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center -rotate-45 group-hover:rotate-0 transition-transform">
-                  <ArrowRight className="w-4 h-4 text-white" />
+                <span className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/10 flex items-center justify-center -rotate-45 group-hover:rotate-0 transition-transform">
+                  <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" />
                 </span>
               </button>
 

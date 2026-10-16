@@ -9,7 +9,7 @@ export default function InstituteInNumbers() {
     <section 
       id="metrics"
       aria-label="Institute in Numbers"
-      className="w-full pt-8 sm:pt-10 lg:pt-12 pb-20 lg:pb-28 bg-slate-200 text-slate-900 border-y border-slate-300"
+      className="w-full pt-8 sm:pt-10 lg:pt-12 pb-20 lg:pb-28 bg-[#E2E8F0] text-slate-900 border-y border-slate-300"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -20,11 +20,11 @@ export default function InstituteInNumbers() {
             <span>INSTITUTE IN NUMBERS • ACADEMIC BENCHMARKS</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">
+          <h2 className="section-heading text-slate-900">
             Curricular Scope &amp; Learning Benchmarks
           </h2>
 
-          <p className="mt-4 text-base sm:text-lg text-slate-700 leading-relaxed">
+          <p className="mt-4 body-paragraph text-slate-700">
             Key operational metrics and structural curriculum indicators defining the breadth of AI education at OIAI.
           </p>
         </div>
@@ -52,15 +52,15 @@ export default function InstituteInNumbers() {
                   )}
                 </div>
 
-                <div className="text-4xl sm:text-5xl font-extrabold text-[#4338CA] tracking-tight">
+                <div className="text-4xl sm:text-5xl font-heading font-extrabold text-[#4338CA] tracking-tight">
                   {item.metric}
                 </div>
 
-                <h3 className="text-lg font-bold text-slate-900 mt-2">
+                <h3 className="card-heading text-slate-900 mt-2">
                   {item.label}
                 </h3>
 
-                <p className="mt-2 text-sm text-slate-700 leading-relaxed">
+                <p className="mt-2 text-sm sm:text-[15px] font-sans text-slate-700 leading-relaxed">
                   {item.supportingText}
                 </p>
               </div>

@@ -12,7 +12,7 @@ export default function LabsMethodology() {
     <section 
       id="methodology"
       aria-label="Labs and Learning Methodology"
-      className="w-full py-24 lg:py-32 bg-indigo-950 text-slate-50 border-y border-[#45416F] relative overflow-hidden"
+      className="w-full py-24 lg:py-32 bg-[#1E1B4B] text-slate-50 border-y border-[#45416F] relative overflow-hidden"
     >
       {/* Subtle Purple Research Radial Glow */}
       <div 
@@ -33,11 +33,11 @@ export default function LabsMethodology() {
             <span>LABS &amp; METHODOLOGY • 6-STAGE PROGRESSION</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#F1F5F9] tracking-tight">
+          <h2 className="section-heading text-[#F1F5F9]">
             The Six-Stage Learning Lifecycle
           </h2>
 
-          <p className="mt-4 text-base sm:text-lg text-[#CBD5E1] leading-relaxed">
+          <p className="mt-4 body-paragraph text-[#CBD5E1]">
             Every technical concept progresses through six structured developmental phases — taking ideas from mathematical formulation to measurable, deployed software.
           </p>
         </div>
@@ -131,11 +131,11 @@ export default function LabsMethodology() {
             </span>
           </div>
 
-          <h3 className="text-2xl sm:text-3xl font-extrabold text-[#F1F5F9] tracking-tight">
+          <h3 className="card-heading text-2xl sm:text-3xl font-extrabold text-[#F1F5F9] tracking-tight">
             {activeStage.name} — {activeStage.tagline}
           </h3>
 
-          <p className="mt-4 text-base sm:text-lg text-[#CBD5E1] leading-relaxed max-w-4xl">
+          <p className="mt-4 body-paragraph text-[#CBD5E1] max-w-4xl">
             {activeStage.description}
           </p>
 

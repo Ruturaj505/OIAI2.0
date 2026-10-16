@@ -39,12 +39,12 @@ export default function Footer() {
                   className="w-full h-full object-contain"
                 />
               </div>
-              <span className="font-extrabold text-xl tracking-tight text-slate-50">
+              <span className="font-heading font-bold text-xl tracking-tight text-slate-50">
                 OIAI <span className="text-slate-400 font-normal">| Odisha Institute of AI</span>
               </span>
             </div>
 
-            <p className="text-sm text-slate-300 max-w-sm leading-relaxed">
+            <p className="font-sans text-sm sm:text-[15px] text-slate-300 max-w-sm leading-relaxed">
               Odisha Institute of Artificial Intelligence is an educational and research-focused initiative dedicated to comprehensive training in modern foundation models, machine learning, and computational AI engineering.
             </p>
 
@@ -59,7 +59,7 @@ export default function Footer() {
 
           {/* Column: Programs */}
           <div>
-            <h3 className="text-xs font-mono font-bold uppercase tracking-wider text-slate-50 mb-4">
+            <h3 className="font-heading text-xs font-semibold uppercase tracking-wider text-slate-50 mb-4">
               Academic Tracks
             </h3>
             <ul className="space-y-2 text-sm">
@@ -98,7 +98,7 @@ export default function Footer() {
 
           {/* Column: Portals & Research */}
           <div>
-            <h3 className="text-xs font-mono font-bold uppercase tracking-wider text-slate-50 mb-4">
+            <h3 className="font-heading text-xs font-semibold uppercase tracking-wider text-slate-50 mb-4">
               Portals &amp; Portfolios
             </h3>
             <ul className="space-y-2 text-sm">
@@ -132,7 +132,7 @@ export default function Footer() {
 
           {/* Column: Institutional & Regional SEO */}
           <div>
-            <h3 className="text-xs font-mono font-bold uppercase tracking-wider text-slate-50 mb-4">
+            <h3 className="font-heading text-xs font-semibold uppercase tracking-wider text-slate-50 mb-4">
               Enterprise &amp; Regional
             </h3>
             <ul className="space-y-2 text-sm">

@@ -175,7 +175,7 @@ export default function CourseFinderWizard() {
   return (
     <section 
       id="course-finder" 
-      className="w-full py-24 lg:py-32 bg-slate-50 dark:bg-[#080b11] border-b border-slate-200/80 dark:border-white/10 relative transition-colors duration-300"
+      className="w-full py-24 lg:py-32 bg-[#F8FAFC] dark:bg-[#080b11] border-b border-[#CBD5E1] dark:border-white/10 relative transition-colors duration-300"
     >
       {/* Ambient background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[750px] h-[400px] bg-gradient-to-r from-[#2563eb]/10 via-[#7c3aed]/10 to-transparent blur-3xl pointer-events-none" />
@@ -188,11 +188,11 @@ export default function CourseFinderWizard() {
             <span>Interactive AI Course Finder • 60-Second Match</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0f172a] dark:text-white tracking-tight">
+          <h2 className="section-heading text-[#0f172a] dark:text-white">
             Find Your Custom AI Match
           </h2>
 
-          <p className="mt-3 text-base sm:text-lg text-slate-600 dark:text-slate-400">
+          <p className="mt-3 body-paragraph text-slate-600 dark:text-slate-400">
             Answer 3 quick questions to discover your personalized OIAI curriculum, salary projections, and eligibility in 60 seconds.
           </p>
 
@@ -213,7 +213,7 @@ export default function CourseFinderWizard() {
         </div>
 
         {/* Wizard Main Card */}
-        <div className="rounded-2xl bg-slate-100 dark:bg-[#0c101b]/95 border border-slate-200 dark:border-white/10 backdrop-blur-2xl p-5 sm:p-8 lg:p-10 shadow-xs">
+        <div className="rounded-2xl bg-[#E8EDF5] dark:bg-[#0c101b]/95 border border-[#CBD5E1] dark:border-white/10 backdrop-blur-2xl p-5 sm:p-8 lg:p-10 shadow-xs">
           
           <AnimatePresence mode="wait">
             {/* STEP 1: USER LEVEL */}
@@ -227,10 +227,10 @@ export default function CourseFinderWizard() {
                 className="space-y-6"
               >
                 <div className="text-center sm:text-left">
-                  <h3 className="text-xl sm:text-2xl font-bold text-[#0f172a] dark:text-white">
+                  <h3 className="card-heading text-xl sm:text-2xl font-bold text-[#0f172a] dark:text-white">
                     1. What is your current level?
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
+                  <p className="text-xs sm:text-sm body-paragraph text-slate-600 dark:text-slate-400 mt-1">
                     Select your current academic or professional standing to match prerequisites and ramp-up pace.
                   </p>
                 </div>

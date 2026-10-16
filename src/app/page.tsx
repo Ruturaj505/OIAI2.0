@@ -4,7 +4,9 @@ import React, { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import TrustIndicators from "@/components/TrustIndicators";
+import HomepageQuickAnswers from "@/components/HomepageQuickAnswers";
 import FindYourAIPath from "@/components/FindYourAIPath";
+import AIProgramsSection from "@/components/AIProgramsSection";
 import InstituteInNumbers from "@/components/InstituteInNumbers";
 import PedagogicalPillars from "@/components/PedagogicalPillars";
 import CurriculumCatalog from "@/components/CurriculumCatalog";
@@ -55,10 +57,16 @@ export default function Home() {
         {/* Hero Trust Indicators */}
         <TrustIndicators />
 
+        {/* Homepage Direct Answers Section (Item 8) */}
+        <HomepageQuickAnswers onOpenEnroll={handleOpenInquiry} />
+
         {/* Signature Feature: Find Your AI Path (Item 9) */}
         <FindYourAIPath 
           onSelectCareer={(role) => handleOpenInquiry(role.title)} 
         />
+
+        {/* AI Programs Section (Item 10) */}
+        <AIProgramsSection onOpenEnroll={handleOpenInquiry} />
 
         {/* Interactive AI Course Finder (Item 11) */}
         <CourseFinderWizard />

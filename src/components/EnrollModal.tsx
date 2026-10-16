@@ -40,6 +40,18 @@ export default function EnrollModal({ isOpen, onClose, defaultProgram }: EnrollM
     }
   }, [defaultProgram]);
 
+  // Prevent background scroll when modal is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
+
   if (!isOpen) return null;
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -52,7 +64,7 @@ export default function EnrollModal({ isOpen, onClose, defaultProgram }: EnrollM
   return (
     <div
       id="enroll-modal"
-      className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 overflow-y-auto"
+      className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 md:p-6 overflow-y-auto"
       role="dialog"
       aria-modal="true"
       aria-labelledby="inquiry-modal-title"
@@ -65,14 +77,14 @@ export default function EnrollModal({ isOpen, onClose, defaultProgram }: EnrollM
       />
 
       {/* Modal Dialog Content */}
-      <div className="relative w-full max-w-2xl rounded-2xl bg-[#25234F] border border-[#45416F] shadow-2xl p-5 sm:p-8 z-10 my-4 sm:my-8 overflow-hidden max-h-[92vh] overflow-y-auto text-slate-100">
+      <div className="relative w-full max-w-2xl rounded-t-[28px] sm:rounded-2xl bg-[#25234F] border border-[#45416F] shadow-2xl p-4.5 sm:p-8 z-10 my-0 sm:my-8 overflow-hidden max-h-[92vh] sm:max-h-[90vh] overflow-y-auto text-slate-100 pr-12 sm:pr-8">
         
         {/* Close Button */}
         <button
           onClick={onClose}
           id="close-enroll-modal"
           aria-label="Close inquiry dialog"
-          className="absolute top-5 right-5 p-2 rounded-xl bg-[#1E1B4B] hover:bg-[#272451] text-slate-300 hover:text-white transition-all cursor-pointer border border-[#45416F] focus-visible:outline-2 focus-visible:outline-indigo-400"
+          className="absolute top-4 right-4 sm:top-5 sm:right-5 p-2 rounded-xl bg-[#1E1B4B] hover:bg-[#272451] text-slate-300 hover:text-white transition-all cursor-pointer border border-[#45416F] focus-visible:outline-2 focus-visible:outline-indigo-400"
         >
           <X className="w-5 h-5" />
         </button>

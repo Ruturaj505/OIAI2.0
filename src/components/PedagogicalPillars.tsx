@@ -26,7 +26,7 @@ export default function PedagogicalPillars() {
     <section 
       id="pillars"
       aria-label="Pedagogical Pillars"
-      className="w-full py-24 lg:py-32 bg-slate-100 text-slate-900 border-b border-slate-300"
+      className="w-full py-24 lg:py-32 bg-[#F1F5F9] text-slate-900 border-b border-slate-300"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -37,11 +37,11 @@ export default function PedagogicalPillars() {
             <span>PEDAGOGICAL PILLARS • HOW WE TEACH</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">
+          <h2 className="section-heading text-slate-900">
             The Six Pillars of OIAI Education
           </h2>
 
-          <p className="mt-4 text-base sm:text-lg text-slate-700 leading-relaxed">
+          <p className="mt-4 body-paragraph text-slate-700">
             A principled, engineering-first approach designed to build genuine conceptual mastery, practical coding proficiency, and long-term research resilience.
           </p>
         </div>
@@ -65,11 +65,11 @@ export default function PedagogicalPillars() {
                     </span>
                   </div>
 
-                  <h3 className="text-xl font-bold text-slate-900 leading-snug group-hover:text-indigo-700 transition-colors">
+                  <h3 className="card-heading text-slate-900 leading-snug group-hover:text-indigo-700 transition-colors">
                     {pillar.title}
                   </h3>
 
-                  <p className="mt-3 text-sm text-slate-700 leading-relaxed">
+                  <p className="mt-3 text-sm sm:text-[15px] font-sans text-slate-700 leading-relaxed">
                     {pillar.description}
                   </p>
                 </div>
