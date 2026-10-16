@@ -57,9 +57,9 @@ export default function Hero({
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-8">
         
         {/* Left Editorial Text & Actions Column */}
-        <div className="w-full lg:w-[48%] xl:w-[46%] flex flex-col z-10 shrink-0 pb-8 sm:pb-16 lg:pb-20 -mt-1 sm:-mt-4 lg:-mt-8">
+        <div className="w-full lg:w-[48%] xl:w-[46%] flex flex-col z-10 shrink-0 pb-8 sm:pb-16 lg:pb-20 mt-1 sm:mt-2 lg:mt-4">
           
-          {/* Headline - Space Grotesk Bold 56–72px Desktop, 28–36px Mobile */}
+          {/* Headline - Space Grotesk Bold Fluid 24–54px */}
           <h1 className="hero-headline uppercase text-[#0f172a] m-0">
             <span className="block">Learn Artificial Intelligence.</span>
             <span className="block text-[#0f172a]">Build Real Skills.</span>

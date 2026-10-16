@@ -120,8 +120,8 @@ body, p, li, a, button, input, textarea, select {
 .hero-headline {
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: clamp(1.75rem, 5vw + 0.75rem, 4.5rem); /* 28px mobile to 72px desktop */
-  line-height: 1.12;
+  font-size: clamp(1.5rem, 3.2vw + 0.6rem, 3.375rem); /* 24px mobile, ~42px tablet, 54px desktop */
+  line-height: 1.15;
   letter-spacing: -0.025em;
   word-break: break-word;
 }
